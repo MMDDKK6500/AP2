@@ -7,12 +7,10 @@ public class PrincipalVet {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         
-        System.out.println("Qual será o tamanho do vetor?");
-        int tamanho = sc.nextInt();
+        int tamanho = 5;
         
         int vetor[] = new int[tamanho];
         
-        System.out.printf("O tamanho do vetor é: %d\n", vetor.length);
         
         for(int i = 0; i < tamanho; i++) {
             System.out.printf("Qual será o valor do índice %d? ", i);
@@ -20,11 +18,36 @@ public class PrincipalVet {
             vetor[i] = valor;
         }
         
-        for(int i = 0; i < tamanho; i++) {
-            System.out.printf("Valor do índice %d acrescentado 100: %d\n", i, vetor[i] + 100);
+        int soma = 0;
+        int menor = vetor[0];
+        int maior = vetor[0];
+        
+        for (int i = 0; i < tamanho; i++) {
+            soma += vetor[i];
+            
+            if (vetor[i] < menor) {
+                menor = vetor[i];
+            }
+            
+            if (vetor[i] > maior) {
+                maior = vetor[i];
+            }
         }
         
-        System.out.println("");
+        System.out.println("\n\t\t - Saídas -\n");
+        for (int i = 0; i < tamanho; i++) {
+            if (vetor[i] == menor) {
+                System.out.printf("vetor[%d] = %d <---- menor valor\n", i, vetor[i]);
+            } else if (vetor[i] == maior) {
+                System.out.printf("vetor[%d] = %d <---- maior valor\n", i, vetor[i]);
+            } else {
+                System.out.printf("vetor[%d] = %d\n", i, vetor[i]);
+            }
+        }
+        
+        System.out.printf("%d é a soma dos valores. \n", soma);
+        
+        sc.close();
         
     }
     
