@@ -21,8 +21,10 @@ public class PrincipalVet {
         }
         
         for(int i = 0; i < tamanho; i++) {
-            System.out.printf("Valor do índice %d: %d\n", i, vetor[i]);
+            System.out.printf("Valor do índice %d acrescentado 100: %d\n", i, vetor[i] + 100);
         }
+        
+        System.out.println("");
         
     }
     
