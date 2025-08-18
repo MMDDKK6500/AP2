@@ -26,7 +26,7 @@ public class Principal {
         */
 
         for (int i = 0; i < listaPessoas.length; i++) {
-            System.out.printf("\n\tDados da %dº pessoa \n", i+1);
+            System.out.printf("\nDados da %dº pessoa \n", i+1);
             listaPessoas[i] = new Pessoa();
             System.out.print("Nome: ");
             listaPessoas[i].nome = sc.nextLine();
@@ -36,6 +36,9 @@ public class Principal {
             listaPessoas[i].telefone = sc.nextLine();
             System.out.print("Idade: ");
             listaPessoas[i].idade = sc.nextInt();
+            
+            //GPT-5 sugeriu isso pra arrumar o problema de o enter ir das vezes, eu sabia que era algo assim mas não sabia o que exatamente, chat gpt my beloved <3(mal uso)
+            sc.nextLine();
         }
         
         for (int i = 0; i < listaPessoas.length; i++) {
