@@ -7,39 +7,33 @@ public class Principal {
     public static void main(String[] args) {
         
         Scanner sc = new Scanner(System.in);
-        CalculaIMC calculaIMC = new CalculaIMC();
-        
         
         System.out.println("Quantas pessoas será calculado o IMC?");
         int quantiaPessoas = sc.nextInt();
+        sc.nextLine();
 
-        float alturaLista[] = new float[quantiaPessoas];
-        float pesoLista[] = new float[quantiaPessoas];
+        CalculaIMC pessoas[] = new CalculaIMC[quantiaPessoas];
         
         for (int i = 0; i < quantiaPessoas; i++) {
             System.out.printf("\nDados da %dº pessoa \n", i+1);
-
-            System.out.print("Altura (m): ");
-            alturaLista[i] = sc.nextFloat();
-            System.out.print("Peso (Kg): ");
-            pesoLista[i] = sc.nextFloat();
             
+            pessoas[i] = new CalculaIMC();
+            
+            System.out.print("Nome: ");
+            pessoas[i].nome = sc.nextLine();
+            System.out.print("Altura (m): ");
+            pessoas[i].altura = sc.nextFloat();
+            System.out.print("Peso (Kg): ");
+            pessoas[i].peso = sc.nextFloat();
             sc.nextLine();
         }
         
         for (int i = 0; i < quantiaPessoas; i++) {
-            float imc = calculaIMC.calcularIMC(alturaLista[i], pesoLista[i]);
+            float imc = pessoas[i].calcularIMC();
             System.out.printf("\nIMC da %dº pessoa é: %.2f\n", i+1, imc);
             
-            if (imc < 18.5f) {
-                System.out.println("Classificado como baixo peso.");
-            } else if (imc < 24.9f) {
-                System.out.println("Classificado como peso adequado.");
-            } else if (imc < 29.9f) {
-                System.out.println("Classificado como sobrepeso.");
-            } else  {
-                System.out.println("Classificado como obesidade.");
-            }
+            String categoria = pessoas[i].categorizarIMC();
+            System.out.println(categoria);
         }
         
     }
