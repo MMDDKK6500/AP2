@@ -8,22 +8,6 @@ public class Principal {
         
         Scanner sc = new Scanner(System.in);
         Pessoa listaPessoas[] = new Pessoa[3];
-        
-        /*
-        
-        listaPessoas[0] = new Pessoa();
-        listaPessoas[0].nome = "Zé Colmeia";
-        listaPessoas[0].email = "zecolmeia@gmail.com";
-        listaPessoas[0].telefone = "11 99976-4455";
-        listaPessoas[0].idade = 41;
-        
-        listaPessoas[1] = new Pessoa();
-        listaPessoas[1].nome = "Juca Bala";
-        listaPessoas[1].email = "juca_bala@gmail.com";
-        listaPessoas[1].telefone = "11 97776-5544";
-        listaPessoas[1].idade = 37;
-        
-        */
 
         for (int i = 0; i < listaPessoas.length; i++) {
             System.out.printf("\nDados da %dº pessoa \n", i+1);
