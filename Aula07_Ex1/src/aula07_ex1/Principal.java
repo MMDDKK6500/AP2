@@ -1,13 +1,28 @@
-package metodo_ordenacaoinsercao;
+package aula07_ex1;
 
 import java.util.Arrays;
+import java.util.Scanner;
 
-public class Principal_Insercao {
+public class Principal {
 
     public static void main(String[] args) {
         
-        int v_original[] = {8, 2, 4, 9, 3, 6, 7, 1};
-        int v[] = {8, 2, 4, 9, 3, 6, 7, 1};
+        Scanner sc = new Scanner(System.in);
+        
+        System.out.print("Qual será o tamanho do vetor de números inteiros? ");
+        int tamanho = sc.nextInt();
+        
+        int v_original[] = new int[tamanho];
+        int v[] = new int[tamanho];
+        
+        for (int i = 0; i < tamanho; i++) {
+            System.out.printf("\nNúmero %d \n", i+1);
+            
+            int valor = sc.nextInt();
+            v_original[i] = valor;
+            v[i] = valor;
+            sc.nextLine();
+        }
         
         ordenacaoInsercao(v);
         saida(v, v_original);
