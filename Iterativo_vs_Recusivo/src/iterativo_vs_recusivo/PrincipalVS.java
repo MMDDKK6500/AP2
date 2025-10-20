@@ -8,8 +8,7 @@ public class PrincipalVS {
         
         long tempo1 = System.currentTimeMillis();
         
-        FAT_Iterativo fi = new FAT_Iterativo();
-        fi.fatorialIterativo(fat);
+        FAT_Iterativo.fatorialIterativo(fat);
         
         long tempo2 = System.currentTimeMillis();
         
