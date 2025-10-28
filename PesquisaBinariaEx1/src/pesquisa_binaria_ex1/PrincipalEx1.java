@@ -1,18 +1,16 @@
 package pesquisa_binaria_ex1;
 
 import java.util.Arrays;
-import java.util.Scanner;
 import javax.swing.JOptionPane;
 
 public class PrincipalEx1 {
 
-    public static void main(String[] args) {
-        
-        Scanner sc = new Scanner(System.in);
-        
+    public static void main(String[] args) {        
         int resp;
         
-        int tam = Integer.parseInt(JOptionPane.showInputDialog(null, "Qual será o tamanho do vetor a ser pesquisado? "));
+        int tam = Integer.parseInt(
+                JOptionPane.showInputDialog(null, "Qual será o tamanho do vetor a ser pesquisado? ")
+        );
         int vet[] = new int[tam];
         
         for (int i = 0; i < tam; i++) {
@@ -23,7 +21,7 @@ public class PrincipalEx1 {
         
         ordenacaoPorInsercao(vet);
         
-        JOptionPane.showInputDialog(null, Arrays.toString(vet));
+        JOptionPane.showMessageDialog(null, Arrays.toString(vet));
         
         resp = buscaBin(vet, busca);
         

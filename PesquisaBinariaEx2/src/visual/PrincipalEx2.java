@@ -1,7 +1,6 @@
 package visual;
 
 import java.util.Arrays;
-import java.util.Scanner;
 import javax.swing.JOptionPane;
 import static ordenacao.OrdenaVetor.bSortString;
 import static pesquisa.PesquisaNome.buscaBin;
@@ -9,9 +8,6 @@ import static pesquisa.PesquisaNome.buscaBin;
 public class PrincipalEx2 {
 
     public static void main(String[] args) {
-        
-        Scanner sc = new Scanner(System.in);
-        
         int resp;
         
         int tam = Integer.parseInt(JOptionPane.showInputDialog(null, "Qual será o tamanho do vetor a ser pesquisado? "));
